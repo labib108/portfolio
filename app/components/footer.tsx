@@ -44,7 +44,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4 text-gray-100">Contact</h3>
           <p className="flex items-center gap-2 hover:text-white transition duration-300">
-            <FaEnvelope /> labib@example.com
+            <FaEnvelope /> abubuckkersiddikh@gmail.com
           </p>
           <p className="mt-2 hover:text-white transition duration-300">+880 1720 843651</p>
         </div>
@@ -56,13 +56,13 @@ export default function Footer() {
             <a href="https://github.com/labib108" target="_blank" className="hover:text-white transition transform hover:scale-110">
               <FaGithub size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/labib108" target="_blank" className="hover:text-white transition transform hover:scale-110">
+            <a href="https://www.linkedin.com/in/abu-buckker-siddikh-labib/" target="_blank" className="hover:text-white transition transform hover:scale-110">
               <FaLinkedin size={24} />
             </a>
-            <a href="mailto:labib@example.com" className="hover:text-white transition transform hover:scale-110">
+            <a href="mailto:abubuckkersiddikh@gmail.com" className="hover:text-white transition transform hover:scale-110">
               <FaEnvelope size={24} />
             </a>
-            <a href="https://twitter.com/" target="_blank" className="hover:text-white transition transform hover:scale-110">
+            <a href="https://x.com/Labib_20" target="_blank" className="hover:text-white transition transform hover:scale-110">
               <FaTwitter size={24} />
             </a>
           </div>

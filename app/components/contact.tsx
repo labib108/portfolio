@@ -26,7 +26,7 @@ export default function ContactSection() {
               <FaEnvelope className="text-indigo-600 text-2xl" />
               <div>
                 <p className="font-semibold text-gray-800">Email</p>
-                <p className="text-gray-600">labib@gmail.com</p>
+                <p className="text-gray-600">abubuckkersiddikh@gmail.com</p>
               </div>
             </div>
 
@@ -35,19 +35,19 @@ export default function ContactSection() {
               <FaPhone className="text-indigo-600 text-2xl" />
               <div>
                 <p className="font-semibold text-gray-800">Phone</p>
-                <p className="text-gray-600">01720843651</p>
+                <p className="text-gray-600">+880 1720843651</p>
               </div>
             </div>
 
             {/* Social Icons */}
             <div className="mt-6 flex items-center gap-4">
-              <a href="https://facebook.com" target="_blank" className="p-3 bg-white rounded-full shadow hover:shadow-lg transition">
+              <a href="https://www.facebook.com/siddikh.labib" target="_blank" className="p-3 bg-white rounded-full shadow hover:shadow-lg transition">
                 <FaFacebook className="text-indigo-600 text-xl" />
               </a>
               <a href="https://github.com/labib108" target="_blank" className="p-3 bg-white rounded-full shadow hover:shadow-lg transition">
                 <FaGithub className="text-indigo-600 text-xl" />
               </a>
-              <a href="https://linkedin.com/in/labib108" target="_blank" className="p-3 bg-white rounded-full shadow hover:shadow-lg transition">
+              <a href="https://www.linkedin.com/in/abu-buckker-siddikh-labib/" target="_blank" className="p-3 bg-white rounded-full shadow hover:shadow-lg transition">
                 <FaLinkedin className="text-indigo-600 text-xl" />
               </a>
             </div>
@@ -70,7 +70,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 placeholder="Enter your name"
-                className="w-full mt-2 p-3 rounded-xl bg-gray-100 outline-indigo-500"
+                className="w-full mt-2 p-3 rounded-xl text-gray-700 bg-gray-100 outline-indigo-500"
               />
             </div>
 
@@ -79,7 +79,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full mt-2 p-3 rounded-xl bg-gray-100 outline-indigo-500"
+                className="w-full mt-2 p-3 rounded-xl text-gray-700 bg-gray-100 outline-indigo-500"
               />
             </div>
 
@@ -88,7 +88,7 @@ export default function ContactSection() {
               <textarea
                 placeholder="Write your message..."
                 rows={5}
-                className="w-full mt-2 p-3 rounded-xl bg-gray-100 outline-indigo-500"
+                className="w-full mt-2 p-3 rounded-xl text-gray-700 bg-gray-100 outline-indigo-500"
               />
             </div>
 

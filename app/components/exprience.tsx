@@ -20,12 +20,12 @@ export default function ExperienceSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative max-w-4xl mx-auto"
+        className="relative max-w-4xl mx-auto space-y-10"
       >
         {/* Timeline Line */}
         <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-60"></div>
 
-        {/* Card */}
+        {/* BAE Innovation Card */}
         <div className="relative ml-16 bg-slate-900/60 backdrop-blur-lg border border-slate-700 rounded-2xl p-8 shadow-xl hover:shadow-purple-500/30 transition duration-300 hover:scale-[1.01]">
           <div className="absolute -left-6 top-8 rounded-full w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg flex items-center justify-center">
             <Briefcase className="text-white" size={20} />
@@ -41,7 +41,7 @@ export default function ExperienceSection() {
           <div className="flex flex-wrap gap-5 mt-6 text-slate-300">
             <div className="flex items-center gap-2">
               <Building2 size={18} className="text-blue-400" />
-              <span>Trainee Software Engineer</span>
+              <span>Junior Software Engineer</span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -61,7 +61,7 @@ export default function ExperienceSection() {
             <span className="text-purple-400 font-medium">Laravel</span>, and{" "}
             <span className="text-pink-400 font-medium">MySQL</span>.  
             I worked on real-world production projects, collaborated with senior engineers, 
-            and improved system performance, scalability, and code quality.  
+            and improved system performance, scalability, and code quality.
           </p>
 
           <ul className="mt-5 space-y-2 text-slate-300">
@@ -76,6 +76,60 @@ export default function ExperienceSection() {
             <li className="flex items-start gap-2">
               <span className="text-blue-400 mt-1">✔</span>
               Optimized MySQL queries, reduced load time significantly.
+            </li>
+          </ul>
+        </div>
+
+        {/* SparkTech Agency Card */}
+        <div className="relative ml-16 bg-slate-900/60 backdrop-blur-lg border border-slate-700 rounded-2xl p-8 shadow-xl hover:shadow-purple-500/30 transition duration-300 hover:scale-[1.01]">
+          <div className="absolute -left-6 top-8 rounded-full w-10 h-10 bg-gradient-to-br from-green-500 to-teal-500 shadow-lg flex items-center justify-center">
+            <Briefcase className="text-white" size={20} />
+          </div>
+
+          <h3 className="text-2xl font-bold text-white">
+            SparkTech Agency
+          </h3>
+          <p className="text-slate-400 text-sm mt-1">
+            Sister concern of Betopia Group
+          </p>
+
+          <div className="flex flex-wrap gap-5 mt-6 text-slate-300">
+            <div className="flex items-center gap-2">
+              <Building2 size={18} className="text-green-400" />
+              <span>Junior Blockchain Developer</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <CalendarDays size={18} className="text-teal-400" />
+              <span>December 2025 – Present</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MapPin size={18} className="text-pink-400" />
+              <span>Dhaka, Bangladesh (Full-Time)</span>
+            </div>
+          </div>
+
+          <p className="text-slate-300 mt-6 leading-relaxed">
+            At SparkTech Agency, I worked on blockchain-related projects, implementing smart contracts and decentralized applications (DApps) using technologies like{" "}
+            <span className="text-green-400 font-medium">Solidity</span>,{" "}
+            <span className="text-teal-400 font-medium">Ethereum</span>, and{" "}
+            <span className="text-pink-400 font-medium">Web3.js</span>.  
+            Gained hands-on experience with blockchain architecture, testing, and deployment.
+          </p>
+
+          <ul className="mt-5 space-y-2 text-slate-300">
+            <li className="flex items-start gap-2">
+              <span className="text-teal-400 mt-1">✔</span>
+              Developed and deployed smart contracts on Ethereum testnet.
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-green-400 mt-1">✔</span>
+              Integrated blockchain functionality into web applications using Web3.js.
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-pink-400 mt-1">✔</span>
+              Collaborated with senior blockchain developers to optimize DApps performance.
             </li>
           </ul>
         </div>
