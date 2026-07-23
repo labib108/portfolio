@@ -16,7 +16,9 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4 text-gray-100">About Me</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Hi, I&apos;m Labib, a software engineer focused on building modern and scalable web applications. Skilled in Laravel, Next.js, PHP, and more.
+            Hi, I&apos;m Sheikh Abu Backkar Siddiq (Labib), a KUET CSE graduate
+            and Backend Software Engineer focused on microservices, distributed
+            systems, NestJS, and TypeScript.
           </p>
         </div>
 
