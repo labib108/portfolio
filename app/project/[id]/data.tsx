@@ -117,7 +117,6 @@ export const projects: ProjectData[] = [
       "Lexicon is a web-based platform designed to provide educational, immigration and testing services. It includes a modern frontend, CMS-driven backend, user dashboards, and integrated testing modules. MockTest is a dedicated module within Lexicon that allows administrators to create mock tests, manage questions, evaluate answers, and generate scores for students.",
     role: "Full-Stack Developer",
     badge: "Professional Experience",
-    banner: "/images/projects/lexicon.png",
     technologies: [
       "Laravel",
       "PHP",
@@ -152,7 +151,6 @@ export const projects: ProjectData[] = [
         ],
       },
     ],
-    images: ["/images/projects/lexicon.png"],
     note: CONFIDENTIAL_NOTE,
     contactEmail: "abubuckkersiddikh@gmail.com",
   },

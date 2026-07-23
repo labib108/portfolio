@@ -65,7 +65,7 @@ export default function Hero() {
             />
 
             <motion.img
-                src="/images/labib.png"
+                src="/images/labib3.jpeg"
                 alt="Sheikh Abu Backkar Siddiq"
                 className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full border-4 border-gray-900 dark:border-zinc-100 mb-5 sm:mb-6 shadow-lg object-cover"
                 initial={{ opacity: 0, scale: 0.8 }}
