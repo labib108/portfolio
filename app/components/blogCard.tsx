@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar } from "lucide-react";
+import { Calendar, ArrowUpRight } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 
 const blogs = [
@@ -25,25 +25,30 @@ const blogs = [
 
 export default function BlogPage() {
   return (
-    <section id="blog" className="py-20 px-6 bg-gray-50 min-h-screen">
-      <div className="max-w-5xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900">Latest Blogs</h1>
-        <p className="text-gray-600 mt-2 text-lg">
+    <section
+      id="blog"
+      className="py-14 sm:py-20 px-4 sm:px-6 bg-gray-50 dark:bg-zinc-950"
+    >
+      <div className="max-w-5xl mx-auto text-center mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-zinc-100">
+          Latest Blogs
+        </h1>
+        <p className="text-gray-600 dark:text-zinc-400 mt-2 text-base sm:text-lg">
           Articles, insights & things I learn while building projects.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-10 max-w-5xl mx-auto">
         {blogs.map((blog, index) => (
           <motion.div
             key={blog.id}
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.15, duration: 0.6 }}
-            className="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden group"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            className="bg-white dark:bg-zinc-900 rounded-2xl shadow-md transition overflow-hidden group border border-transparent dark:border-zinc-800 flex flex-col"
           >
-            {/* Image */}
-            <div className="w-full h-56 overflow-hidden">
+            <div className="w-full h-44 sm:h-56 overflow-hidden">
               <img
                 src={blog.image}
                 alt={blog.title}
@@ -51,31 +56,36 @@ export default function BlogPage() {
               />
             </div>
 
-            {/* Content */}
-            <div className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-indigo-600 transition">
+            <div className="p-5 sm:p-6 flex flex-col flex-1">
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition leading-snug">
                 {blog.title}
               </h2>
 
-              <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-zinc-400 mt-3 text-sm leading-relaxed line-clamp-4">
                 {blog.desc}
               </p>
 
-              {/* Date */}
-              <div className="flex items-center gap-2 text-gray-500 text-xs mt-3">
-                <Calendar size={14} />
-                <span>{blog.date}</span>
-              </div>
+              <div className="mt-auto flex flex-col xs:flex-row sm:flex-row sm:items-center sm:justify-between gap-3 pt-5 border-t border-gray-100 dark:border-zinc-800">
+                <div className="flex items-center gap-2 text-gray-500 dark:text-zinc-500 text-xs">
+                  <Calendar size={14} />
+                  <span>{blog.date}</span>
+                </div>
 
-              {/* Read More */}
-              <a
-                href={blog.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center mt-4 font-medium text-indigo-600 hover:text-indigo-800 transition gap-2"
-              >
-                <FaLinkedin /> Read More ...
-              </a>
+                <a
+                  href={blog.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-3 sm:py-2 rounded-xl
+                    bg-[#0A66C2] text-white text-sm font-semibold
+                    shadow-md shadow-blue-500/20
+                    active:scale-[0.98]
+                    transition-all duration-300"
+                >
+                  <FaLinkedin className="text-base" />
+                  Read More
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}

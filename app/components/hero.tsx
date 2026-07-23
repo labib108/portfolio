@@ -6,8 +6,8 @@ import { useState, useEffect } from "react";
 
 export default function Hero() {
     const texts = [
-        { text: "I'm Sheikh Abu Backkar Siddiq", color: "text-purple-600" },
-        { text: "I'm a Software Engineer", color: "text-blue-600" },
+        { text: "I'm Sheikh Abu Backkar Siddiq", color: "text-purple-600 dark:text-purple-400" },
+        { text: "I'm a Software Engineer", color: "text-blue-600 dark:text-blue-400" },
     ];
 
     const [displayedText, setDisplayedText] = useState("");
@@ -15,7 +15,6 @@ export default function Hero() {
     const [charIndex, setCharIndex] = useState(0);
     const [deleting, setDeleting] = useState(false);
 
-    // Typewriter effect
     useEffect(() => {
         const timeout = setTimeout(
             () => {
@@ -43,108 +42,92 @@ export default function Hero() {
     }, [charIndex, deleting, textIndex]);
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 md:px-0 pt-24 overflow-hidden bg-gradient-to-b from-indigo-50 via-pink-50 to-yellow-50">
-            {/* Floating animated shapes */}
+        <section className="relative min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 pt-24 pb-12 overflow-hidden bg-gradient-to-b from-indigo-50 via-pink-50 to-yellow-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
             <motion.div
-                className="absolute w-64 h-64 bg-purple-300 rounded-full opacity-20"
-                animate={{ x: [0, 250, 0], y: [0, 100, 0] }}
+                className="pointer-events-none absolute w-40 h-40 sm:w-64 sm:h-64 bg-purple-300 dark:bg-purple-600 rounded-full opacity-20"
+                animate={{ x: [0, 80, 0], y: [0, 40, 0] }}
                 transition={{
                     repeat: Infinity,
                     duration: 25,
                     ease: "easeInOut",
                 }}
-                style={{ top: "10%", left: "-10%" }}
+                style={{ top: "10%", left: "-8%" }}
             />
             <motion.div
-                className="absolute w-48 h-48 bg-pink-300 rounded-full opacity-20"
-                animate={{ x: [-50, 180, -50], y: [0, -50, 0] }}
+                className="pointer-events-none absolute w-32 h-32 sm:w-48 sm:h-48 bg-pink-300 dark:bg-pink-600 rounded-full opacity-20"
+                animate={{ x: [-20, 60, -20], y: [0, -30, 0] }}
                 transition={{
                     repeat: Infinity,
                     duration: 28,
                     ease: "easeInOut",
                 }}
-                style={{ bottom: "10%", right: "-10%" }}
-            />
-            <motion.div
-                className="absolute w-56 h-56 bg-green-300 rounded-full opacity-20"
-                animate={{ x: [0, -200, 0], y: [0, 50, 0] }}
-                transition={{
-                    repeat: Infinity,
-                    duration: 22,
-                    ease: "easeInOut",
-                }}
-                style={{ top: "35%", right: "20%" }}
+                style={{ bottom: "10%", right: "-8%" }}
             />
 
-            {/* Profile Picture */}
             <motion.img
                 src="/images/labib.png"
                 alt="Sheikh Abu Backkar Siddiq"
-                className="w-36 h-36 md:w-48 md:h-48 rounded-full border-4 border-gray-900 mb-6 shadow-lg"
+                className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full border-4 border-gray-900 dark:border-zinc-100 mb-5 sm:mb-6 shadow-lg object-cover"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
             />
 
-            {/* Animated Name / Role */}
             <motion.h1
-                className="text-3xl md:text-4xl font-extrabold mb-2 h-12 transition-colors"
+                className="relative z-10 text-xl sm:text-2xl md:text-4xl font-extrabold mb-3 min-h-[3.5rem] sm:min-h-[3rem] md:min-h-12 px-2 transition-colors leading-snug"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
             >
                 <span className={texts[textIndex].color}>{displayedText}</span>
-                <span className="border-r-2 border-gray-900 ml-1 animate-pulse"></span>
+                <span className="border-r-2 border-gray-900 dark:border-zinc-100 ml-1 animate-pulse"></span>
             </motion.h1>
 
-            {/* Description */}
             <motion.p
-                className="text-gray-700 max-w-2xl mb-6 text-lg md:text-xl"
+                className="relative z-10 text-gray-700 dark:text-zinc-300 max-w-2xl mb-6 text-sm sm:text-base md:text-xl leading-relaxed px-1"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.5, duration: 0.8 }}
             >
                 I’m a CSE’19 graduate from{" "}
-                <span className="text-purple-600 font-semibold">
+                <span className="text-purple-600 dark:text-purple-400 font-semibold">
                     Khulna University of Engineering & Technology
-                </span>{" "}
-                with hands-on experience in building full-stack web
-                applications. I’ve interned at{" "}
-                <span className="text-blue-600 font-semibold">
-                    BAE Innovation
                 </span>
-                , working with PHP, Laravel, and MySQL, and I’m passionate about
-                creating clean, efficient, and user-friendly software.
-                Currently, I’m diving deeper into full-stack development with{" "}
-                <span className="text-green-600 font-semibold">Next.js</span>,
-                building projects that solve real problems and create seamless
-                user experiences.
+                . I enjoy building reliable backend systems that solve
+                real-world problems. My current focus is{" "}
+                <span className="text-blue-600 dark:text-blue-400 font-semibold">
+                    distributed systems
+                </span>
+                ,{" "}
+                <span className="text-green-600 dark:text-green-400 font-semibold">
+                    cloud infrastructure
+                </span>
+                , and scalable architecture. My long-term goal is to become a
+                technical founder building products for a global market.
             </motion.p>
 
-            {/* Buttons */}
             <motion.div
-                className="flex flex-wrap justify-center gap-4 mb-6"
+                className="relative z-10 flex flex-col sm:flex-row w-full max-w-sm sm:max-w-none sm:w-auto sm:flex-wrap justify-center gap-3 sm:gap-4 mb-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.3, duration: 0.8 }}
             >
                 <Link
                     href="#projects"
-                    className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-md hover:from-purple-600 hover:to-pink-600 transition"
+                    className="w-full sm:w-auto px-6 py-3.5 sm:py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl sm:rounded-md font-semibold text-center active:scale-[0.98] transition"
                 >
                     View My Work
                 </Link>
                 <Link
                     href="#contact"
-                    className="px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-md hover:from-green-500 hover:to-blue-600 transition"
+                    className="w-full sm:w-auto px-6 py-3.5 sm:py-2.5 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-xl sm:rounded-md font-semibold text-center active:scale-[0.98] transition"
                 >
                     Get in Touch
                 </Link>
             </motion.div>
 
-            {/* Social Icons */}
             <motion.div
-                className="flex justify-center gap-6 text-gray-900 text-2xl"
+                className="relative z-10 flex justify-center gap-5 text-gray-900 dark:text-zinc-100 text-2xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 3, duration: 0.8 }}
@@ -153,7 +136,8 @@ export default function Hero() {
                     href="https://github.com/labib108"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-gray-600 transition"
+                    className="touch-target rounded-full bg-white/60 dark:bg-zinc-800/60 shadow-sm"
+                    aria-label="GitHub"
                 >
                     <FaGithub />
                 </a>
@@ -161,13 +145,15 @@ export default function Hero() {
                     href="https://www.linkedin.com/in/abu-buckker-siddikh-labib/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-blue-700 transition"
+                    className="touch-target rounded-full bg-white/60 dark:bg-zinc-800/60 shadow-sm"
+                    aria-label="LinkedIn"
                 >
                     <FaLinkedin />
                 </a>
                 <a
                     href="mailto:abubuckkersiddikh@gmail.com"
-                    className="hover:text-red-600 transition"
+                    className="touch-target rounded-full bg-white/60 dark:bg-zinc-800/60 shadow-sm"
+                    aria-label="Email"
                 >
                     <FaEnvelope />
                 </a>

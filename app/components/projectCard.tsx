@@ -2,59 +2,23 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { projects } from "@/app/project/[id]/data";
 
-const projects = [
-  {
-    id: "lexicon",
-    name: "Lexicon - IELTS Mock Test System",
-    description:
-      "An online platform providing authentic IELTS mock tests with instant scoring and analytics.",
-    tech: ["Laravel", "PHP", "MySQL", "JavaScript", "Tailwind CSS"],
-    github: "https://github.com/labib108/lexicon.git",
-  },
-  {
-    id: "patient-consultation",
-    name: "Patient Consultation System",
-    description:
-      "A comprehensive system for doctors to manage patients, appointments, and health history.",
-    tech: ["Laravel", "PHP", "MySQL", "JavaScript"],
-    github: "https://github.com/labib108/Patient-Consultation-System-Laravel.git",
-  },
-  {
-    id: "shop-management",
-    name: "Shop Management System",
-    description:
-      "An efficient system to manage shops including products, sales, and inventory tracking.",
-    tech: ["Laravel", "PHP", "MySQL", "JavaScript"],
-    github: "https://github.com/labib108/Shop-Management-System.git",
-  },
-  {
-    id: "kuet-bank",
-    name: "KUET Bank",
-    description:
-      "A banking system project with core functionalities like account management and transactions.",
-    tech: ["Java", "MySQL"],
-    github: "https://github.com/labib108/Kuet_Bank.git",
-  },
+const cardGradients = [
+  "from-purple-200 to-indigo-400 dark:from-purple-900 dark:to-indigo-800",
+  "from-pink-200 to-red-400 dark:from-pink-900 dark:to-red-800",
+  "from-green-200 to-teal-400 dark:from-green-900 dark:to-teal-800",
+  "from-yellow-200 to-orange-400 dark:from-yellow-900 dark:to-orange-800",
 ];
 
 export default function Projects() {
-  const cardGradients = [
-    "from-purple-200 to-indigo-400",
-    "from-pink-200 to-red-400",
-    "from-green-200 to-teal-400",
-    "from-yellow-200 to-orange-400",
-  ];
-
   return (
     <section
       id="projects"
-      className="min-h-screen py-24 px-6 md:px-12 bg-gradient-to-b from-white to-indigo-50"
+      className="py-14 sm:py-24 px-4 sm:px-6 md:px-12 bg-gradient-to-b from-white to-indigo-50 dark:from-zinc-950 dark:to-zinc-900"
     >
-      {/* Section Title */}
       <motion.h2
-        className="text-4xl md:text-5xl font-extrabold text-gray-900 text-center mb-6"
+        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-zinc-100 text-center mb-4 sm:mb-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -64,53 +28,62 @@ export default function Projects() {
       </motion.h2>
 
       <motion.p
-        className="text-center text-gray-700 max-w-2xl mx-auto mb-16 text-lg md:text-xl"
+        className="text-center text-gray-700 dark:text-zinc-300 max-w-2xl mx-auto mb-10 sm:mb-16 text-base sm:text-lg md:text-xl px-1"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        A selection of my notable projects showcasing my skills in full-stack development, Laravel, Next.js, and database management.
+        Selected professional work across backend systems, full-stack
+        platforms, and dashboard experiences.
       </motion.p>
 
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 max-w-5xl mx-auto">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className={`p-6 rounded-2xl shadow-lg flex flex-col justify-between text-black
+            className={`p-5 sm:p-6 rounded-2xl shadow-lg flex flex-col justify-between text-black dark:text-zinc-100
             bg-gradient-to-br ${cardGradients[index % cardGradients.length]}
-            hover:shadow-2xl hover:scale-105 transition-all duration-300`}
+            transition-all duration-300 active:scale-[0.99] sm:hover:shadow-2xl sm:hover:scale-[1.02]`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.2, duration: 0.6 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
           >
             <div className="space-y-3">
-              <h3 className="text-xl font-bold">{project.name}</h3>
-              <p className="text-sm text-black/80">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.tech.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-white/20 text-black text-xs font-semibold px-2 py-1 rounded"
-                  >
-                    {t}
-                  </span>
-                ))}
+              {project.badge && (
+                <span className="inline-block text-xs font-semibold bg-black/15 dark:bg-white/15 px-2.5 py-1 rounded-full">
+                  {project.badge}
+                </span>
+              )}
+              <h3 className="text-lg sm:text-xl font-bold leading-snug">
+                {project.title}
+              </h3>
+              <p className="text-sm font-medium opacity-90">{project.role}</p>
+              <p className="text-sm text-black/80 dark:text-zinc-200/90 leading-relaxed">
+                {project.description}
+              </p>
+              <div className="pt-2">
+                <p className="text-xs font-semibold uppercase tracking-wide opacity-80 mb-2">
+                  Tech Stack
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-white/30 dark:bg-black/25 text-black dark:text-zinc-100 text-xs font-semibold px-2.5 py-1 rounded-md"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="mt-4 flex justify-between items-center">
-              <Link
-                href={project.github}
-                target="_blank"
-                className="flex items-center gap-2 hover:text-black transition font-semibold"
-              >
-                <FaGithub /> GitHub
-              </Link>
+
+            <div className="mt-6">
               <Link
                 href={`/project/${project.id}`}
-                className="bg-white text-gray-900 px-3 py-1 rounded hover:bg-gray-200 transition font-semibold"
+                className="inline-flex w-full sm:w-auto justify-center bg-white dark:bg-zinc-100 text-gray-900 px-4 py-3 sm:py-2 rounded-xl sm:rounded-lg hover:bg-gray-200 dark:hover:bg-white transition font-semibold active:scale-[0.98]"
               >
                 View Details
               </Link>
