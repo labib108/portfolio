@@ -16,7 +16,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4 text-gray-100">About Me</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Hi, I&apos;m Sheikh Abu Backkar Siddiq (Labib), a KUET CSE graduate
+            Hi, I&apos;m Sheikh Abu Bakkar Siddiq (Labib), a KUET CSE graduate
             and Backend Software Engineer focused on microservices, distributed
             systems, NestJS, and TypeScript.
           </p>

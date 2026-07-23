@@ -12,14 +12,14 @@ export default function Page() {
       {/* Crawlable name & keyword summary for search engines */}
       <header className="sr-only">
         <h1>
-          Sheikh Abu Backkar Siddiq (Labib) — Backend Software Engineer | KUET
+          Sheikh Abu Bakkar Siddiq (Labib) — Backend Software Engineer | KUET
           CSE Graduate
         </h1>
         <p>
           Labib KUET portfolio. Backend engineer specializing in microservices,
           distributed systems, NestJS, TypeScript, gRPC, PostgreSQL, Redis, and
           cloud infrastructure. Experience at Nagorik Technologies Limited and
-          BAE Innovation. Also known as Abu Backkar Siddiq, Abu Buckker Siddikh
+          BAE Innovation. Also known as Abu Bakkar Siddiq, Abu Bakkar Siddikh
           Labib.
         </p>
       </header>

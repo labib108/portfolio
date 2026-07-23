@@ -77,7 +77,7 @@ export default function Navbar() {
           className="text-left text-base sm:text-xl font-semibold text-gray-900 dark:text-zinc-100 truncate max-w-[58%] sm:max-w-none"
         >
           <span className="sm:hidden">Labib</span>
-          <span className="hidden sm:inline">Sheikh Abu Backkar Siddiq</span>
+          <span className="hidden sm:inline">Sheikh Abu Bakkar Siddiq</span>
         </button>
 
         <div className="hidden lg:flex items-center gap-2 xl:gap-3">

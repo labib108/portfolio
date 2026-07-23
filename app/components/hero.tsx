@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function Hero() {
     const texts = [
-        { text: "I'm Sheikh Abu Backkar Siddiq", color: "text-purple-600 dark:text-purple-400" },
+        { text: "I'm Sheikh Abu Bakkar Siddiq", color: "text-purple-600 dark:text-purple-400" },
         { text: "I'm a Software Engineer", color: "text-blue-600 dark:text-blue-400" },
     ];
 
@@ -66,7 +66,7 @@ export default function Hero() {
 
             <motion.img
                 src="/images/labib3.jpeg"
-                alt="Sheikh Abu Backkar Siddiq"
+                alt="Sheikh Abu Bakkar Siddiq"
                 className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full border-4 border-gray-900 dark:border-zinc-100 mb-5 sm:mb-6 shadow-lg object-cover"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
